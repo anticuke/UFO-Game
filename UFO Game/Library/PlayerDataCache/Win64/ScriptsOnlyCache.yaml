@@ -55,13 +55,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10280}
     - Class: 114
-      Script: {instanceID: 11124}
+      Script: {instanceID: 10288}
     - Class: 114
-      Script: {instanceID: 11494}
+      Script: {instanceID: 11126}
     - Class: 114
-      Script: {instanceID: 11558}
+      Script: {instanceID: 11496}
     - Class: 114
-      Script: {instanceID: 27242}
+      Script: {instanceID: 11560}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -259,6 +259,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: e08dc097b830ae769e9cdd9b04e903ac
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Mover
   - hash:
       serializedVersion: 2
       Hash: b8a5e8091ab0b8861d2add371082c5e0
@@ -511,14 +517,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: e08dc097b830ae769e9cdd9b04e903ac
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Mover
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main.unity
   playerPath: C:/Users/Tewi/Desktop/Unity/Project UFO Game/UFO Game/Builds/UFO Game
-    Build 2/UFO Game.exe
+    Build 3/UFO Game.exe
