@@ -8,16 +8,20 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public Text countText;
     public Text winText;
+    public Text livesText;
 
     private Rigidbody2D rb2d;
     private int count;
+    private int lives;
 
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         count = 0;
+        lives = 3;
         winText.text = "";
         SetCountText();
+        SetLivesText();
     }
 
     void FixedUpdate()
@@ -39,15 +43,36 @@ public class PlayerController : MonoBehaviour
             count = count + 1;
             SetCountText();
         }
+
+        else if (other.gameObject.CompareTag ("Enemy"))
+        {
+            other.gameObject.SetActive(false);
+            lives = lives - 1;
+            SetLivesText();
+        }
+
+        if (count == 12)
+        {
+            transform.position = new Vector2(35.0f, 0.0f);
+        }
     }
 
     void SetCountText()
     {
         countText.text = "Count: " + count.ToString();
-        if (count >= 12)
+        if (count >= 20)
         {
-            winText.text = "You win! Game created by Yna Camagay!";
+            winText.text = "You win! Game created by Yna Camagay";
         }
     }
 
+    void SetLivesText()
+    {
+        livesText.text = "Lives: " + lives.ToString();
+        if (lives == 0)
+        {
+            winText.text = "You lose! Game created by Yna Camagay";
+            Destroy(this);
+        }
+    }
 }
